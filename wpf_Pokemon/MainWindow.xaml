@@ -30,39 +30,43 @@
         <!--HEADER-->
         <Grid Grid.Row="0" Grid.ColumnSpan="3" Margin="5, 5, 5, 0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/> <!--NAME-->
-                <ColumnDefinition Width="*"/> <!--SPACE-->
+                <ColumnDefinition Width="Auto"/> <!--BASIC-->
+                <ColumnDefinition Width="*"/> <!--NAME-->
                 <ColumnDefinition Width="Auto"/> <!--HP-->
             </Grid.ColumnDefinitions>
-
-            <!--NAME-->
-            <Border Grid.Column="0" BorderBrush="Black" BorderThickness="1" Margin="2" Padding="5">
-                <TextBlock Text="NAME" VerticalAlignment="Center"/>
+            
+            <!--BASIC-->
+            <Border Grid.Column="0" Background="WhiteSmoke" BorderBrush="Black" BorderThickness="1" CornerRadius="5" Padding="3,1" VerticalAlignment="Center" Margin="0,0,10,0">
+                <TextBlock Text="BASIC" FontWeight="Bold" FontSize="10" VerticalAlignment="Center"/>
             </Border>
 
-            <!--EMPTY SPACE-->
-            <Border Grid.Column="1" BorderBrush="Black" BorderThickness="1" Margin="2" Padding="5">
-                <TextBlock Text="(EMPTY)" HorizontalAlignment="Center"/>
+            <!--NAME-->
+            <Border Grid.Column="1" Margin="2" Padding="5">
+                <TextBlock Grid.Column="1" Text="Staryu" FontWeight="Bold" FontSize="20" VerticalAlignment="Center" Margin="0,0,10,0"/>
             </Border>
 
             <!--HP-->
-            <Border Grid.Column="2" BorderBrush="Black" BorderThickness="1" Margin="2" Padding="5">
-                <TextBlock Text="HP" HorizontalAlignment="Center"/>
+            <Border Grid.Column="2"  Margin="2" Padding="5">
+                <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center">
+                    <TextBlock Text="HP" FontSize="14" VerticalAlignment="Center" Margin="0,0,3,0"/>
+                    <TextBlock Text="60" FontSize="18" FontWeight="Bold" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                    <Image Width="24" Height="24" Source="pictures\HNv9RZi.png"/> <!--Element-->
+                </StackPanel>
             </Border>
             
         </Grid>
 
         <!--IMAGE-->
-        <Border Grid.Row="1" Grid.ColumnSpan="3" Margin="5, 5, 5, 0" BorderBrush="Black" BorderThickness="1" Background="LightGray">
-            <Rectangle Width="220" Height="220" Fill="DarkGray" HorizontalAlignment="Center"/>
+        <Border Grid.Row="1" Grid.ColumnSpan="3" Margin="5, 5, 5, 0" BorderBrush="Black" BorderThickness="1,1,1,0">
+            <Image Source="pictures\staryu.jpg" Stretch="UniformToFill"/>
         </Border>
 
         <!--SUBINFO-->
-        <Border Grid.Row="2" Grid.ColumnSpan="3" Margin="5, 0, 5, 5" Padding="1" BorderBrush="Black" BorderThickness="1">
-            <TextBlock Text="SUBINFO / NO / POKEMON TYPE / HT WT" TextAlignment="Center"/>
+        <Border Grid.Row="2" Grid.ColumnSpan="3" Margin="5, 0, 5, 5" Padding="3" Background="#FFEFEFEF"  BorderBrush="Black" BorderThickness="1,0,1,1">
+            <TextBlock Text="NO. 0120 Star Shape Pokémon HT: 2'7'' WT: 76.1 lbs." FontSize="11" Foreground="Gray" TextAlignment="Center" VerticalAlignment="Center"/>
         </Border>
         
-        <!--ATTACK-->
+        <!--ATTACK SECTION-->
         <Grid Grid.Row="3" Grid.ColumnSpan="3" Margin="5">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/> <!--ATTACK HEADER-->
@@ -77,22 +81,25 @@
 
             <!--HEADER-->
             <Border Grid.Row="0" Grid.Column="0" BorderBrush="Black" BorderThickness="1" Padding="5" Margin="2">
-                <TextBlock Text="[ICON]"/>
+                <StackPanel Orientation="Horizontal">
+                    <Image Width="20" Source="C:\Users\Artin\source\repos\wpf_Pokemon\wpf_Pokemon\pictures\uGgzRK6.png"/>
+                <Image Width="20" Source="C:\Users\Artin\source\repos\wpf_Pokemon\wpf_Pokemon\pictures\HNv9RZi.png"/>
+                </StackPanel>
             </Border>
             
             <!--ATK NAME-->
             <Border Grid.Row="0" Grid.Column="1" BorderBrush="Black" BorderThickness="1" Padding="5" Margin="2">
-                <TextBlock Text="MOVE NAME" TextAlignment="Center"/>
+                <TextBlock Text="Swift" TextAlignment="Center" Margin="0,0,50,0"/>
             </Border>
             
             <!--DMG-->
             <Border Grid.Row="0" Grid.Column="2" BorderBrush="Black" BorderThickness="1" Padding="5" Margin="2">
-                <TextBlock Text="[DMG]" TextAlignment="Center"/>
+                <TextBlock Text="30" TextAlignment="Center" />
             </Border>
             
             <!--ATK DESC-->
             <Border Grid.Row="1" Grid.ColumnSpan="3" BorderBrush="Black" BorderThickness="1" Padding="5" Margin="1">
-                <TextBlock Text="Atk Description, My dogs are all Jamaican but they are nice people dogs arent people btw im wafflin " TextWrapping="Wrap"/>
+                <TextBlock Text="This attack's damage isn't affected by Weakness or Resistance, or by any effects on your opponent's Active Pokémon." TextWrapping="Wrap"/>
             </Border>
         </Grid>
         
@@ -110,19 +117,19 @@
               </Grid.ColumnDefinitions>
 
              <Border Grid.Row="0" Grid.Column="0" BorderBrush="Black" BorderThickness="1" Padding="5" Margin="2">
-                 <TextBlock Text="[ICON]"/>
-             </Border>
+                <Image Width="20" Source="C:\Users\Artin\source\repos\wpf_Pokemon\wpf_Pokemon\pictures\HNv9RZi.png"/>
+            </Border>
 
              <Border Grid.Row="0" Grid.Column="1" BorderBrush="Black" BorderThickness="1" Padding="5" Margin="2">
-                 <TextBlock Text="MOVE NAME" TextAlignment="Center"/>
+                <TextBlock Text="Swift" TextAlignment="Center" Margin="0,0,50,0"/>
              </Border>
 
              <Border Grid.Row="0" Grid.Column="2" BorderBrush="Black" BorderThickness="1" Padding="5" Margin="2">
-                 <TextBlock Text="[DMG]" TextAlignment="Center"/>
+                 <TextBlock Text="30" TextAlignment="Center"/>
              </Border>
 
             <Border Grid.Row="1" Grid.ColumnSpan="3" BorderBrush="Black" BorderThickness="1" Padding="5" Margin="1">
-                <TextBlock Text="There comes a time with the headen certain cold when the world must come together as one there are peapole dying" TextWrapping="Wrap"/>
+                <TextBlock Text="This attack's damage isn't affected by Weakness or Resistance, or by any effects on your opponent's Active Pokémon." TextWrapping="Wrap"/>
             </Border>
 
 
